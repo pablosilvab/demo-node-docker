@@ -1,23 +1,44 @@
-# Hello Minikube
+# Demo Node Docker
 
-Este proyecto tiene como objetivo realizar una Demo de Docker & Kubernetes!
+Este proyecto tiene como objetivo realizar una Demo de Docker con NodeJS.
 
-## Comenzando 🚀
+## Requisitos
 
-### Docker 📋
+* Tener Docker instalado.
+* Tener NodeJS y npm instalados.
+
+## Ejecución 🚀
+
+### Local
+
+* Instalar dependencias 
+
+```
+make install
+```
+
+* Ejecutar proyecto
+
+```
+make run
+```
+
+* Acceder a [http://localhost:8080](http://localhost:8080) 
+
+### Con Docker 📋
 
 Para probar esta aplicación en ambiente local construir y ejecutar la imagen Docker con los siguientes comandos.
 
 * Construir imagen Docker. 
 
 ```
-docker build -t DOCKER_HUB_USER:hellominikube .
+make docker-build
 ```
 
 * Ejecutar 
 
 ```
-docker run -p 8080:8080 DOCKER_HUB_USER:hellominikube
+make docker-run
 ```
 
 * Acceder a [http://localhost:8080](http://localhost:8080) 
@@ -25,9 +46,7 @@ docker run -p 8080:8080 DOCKER_HUB_USER:hellominikube
 Puedes subir tu imagen a tu repositorio personal 
 
 ```
-docker tag hellominikube DOCKER_HUB_USER/hellominikube
-docker push DOCKER_HUB_USER/hellominikube
+make docker-push
 ```
 
-### Kubernetes 
 

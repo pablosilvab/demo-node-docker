@@ -4,7 +4,7 @@ var app = express();
 var port = process.env.PORT || 8080
 var message = process.env.MSG || 'World'
 
-app.get('/', function (req, res) {
+app.get('/',  (req, res) =>{
   res.send(`Hello ${message}!`);
 });
 

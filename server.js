@@ -1,9 +1,13 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var handleRequest = function(request, response) {
-  console.log('Received request for URL: ' + request.url);
-  response.writeHead(200);
-  response.end('Hello World!');
-};
-var www = http.createServer(handleRequest);
-www.listen(8080);
+var port = process.env.PORT || 3000
+var message = process.env.MSG || 'World'
+
+app.get('/', function (req, res) {
+  res.send(`Hello ${message}!`);
+});
+
+app.listen(port, function () {
+  console.log(`Example app listening on port: ${port}!`);
+});

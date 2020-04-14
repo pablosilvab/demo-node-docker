@@ -1,4 +1,7 @@
-FROM node:6.14.2
-EXPOSE 8080
-COPY server.js .
+FROM node:10-alpine
+WORKDIR /app
+COPY package*.json /app/
+RUN npm ci
+COPY . /app
 CMD node server.js
+EXPOSE 8081

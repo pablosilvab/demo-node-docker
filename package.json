@@ -1,0 +1,23 @@
+{
+  "name": "demo-node-docker",
+  "version": "1.0.0",
+  "description": "Este proyecto tiene como objetivo realizar una Demo de Docker & Kubernetes!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablosilvab/demo-node-docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablosilvab/demo-node-docker/issues"
+  },
+  "homepage": "https://github.com/pablosilvab/demo-node-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -3,6 +3,10 @@ APP_VERSION=1.0.0
 USER_HUB=pablon27
 PORT=8080
 
+docker-push:
+	docker build -t ${USER_HUB}/${APP_NAME}:${APP_VERSION} .
+	docker push ${USER_HUB}/${APP_NAME}:${APP_VERSION}
+
 docker-run:
 	docker run --rm -p ${PORT}:8080 ${USER_HUB}/${APP_NAME}:${APP_VERSION}
 

@@ -1,7 +1,6 @@
-FROM node:10-alpine
-WORKDIR /app
-COPY package*.json /app/
-RUN npm ci
-COPY . /app
-CMD node server.js
-EXPOSE 8081
+FROM node:latest
+WORKDIR /usr/src/app
+COPY . .
+RUN npm install
+EXPOSE 8080
+CMD [ "npm", "start" ]

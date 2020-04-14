@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:12-alpine AS build
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install

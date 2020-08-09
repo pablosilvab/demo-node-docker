@@ -14,7 +14,7 @@ docker-build:
 	docker build -t ${USER_HUB}/${APP_NAME}:${APP_VERSION} .
 
 run:
-	node ./server.js
+	npm start
 
 install:
 	npm install
